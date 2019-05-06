@@ -5,7 +5,7 @@
 ### Angular ###
 ## Angular ##
 # compiled output
-/dist
+# /dist - I want to save a library
 /tmp
 /app/**/*.js
 /app/**/*.js.map
