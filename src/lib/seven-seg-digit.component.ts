@@ -50,7 +50,7 @@ export class SevenSegDigitComponent implements OnInit, OnChanges {
   }
 
 
-  get segState(): object {
+  get segState(): {[key: string]: boolean} {
     const s = {};
     for (const k of 'ABCDEFG.') {
       s[k] = false;
@@ -63,7 +63,7 @@ export class SevenSegDigitComponent implements OnInit, OnChanges {
     return s;
   }
 
-  constructor(private sanitizer: DomSanitizer) {
+  constructor(public sanitizer: DomSanitizer) {
     for (const k in this.segments) {
       if (!this.segments[k.toLowerCase()]) {
         this.segments[k.toLowerCase()] = this.segments[k];

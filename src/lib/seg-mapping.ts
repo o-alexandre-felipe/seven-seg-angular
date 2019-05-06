@@ -1,4 +1,4 @@
-export const STANDARD_SEG_MAPPING: object = {
+export const STANDARD_SEG_MAPPING: {[key: string]: string} = {
   0: 'ABCDEF',
   1: 'BC',
   2: 'ABGED',

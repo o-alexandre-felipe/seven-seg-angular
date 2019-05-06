@@ -18,7 +18,7 @@ export class SevenSegCellComponent implements OnInit, OnChanges {
   horizontalW: number;
   verticalW: number;
   verticalH: number;
-  segState: object;
+  segState: {[key: string]:boolean;};
   _digit = '';
   @Input('digit') set digit(digit: string) {
     const s = {};
