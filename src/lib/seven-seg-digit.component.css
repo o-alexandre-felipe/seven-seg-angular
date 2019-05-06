@@ -1,0 +1,87 @@
+div.bed {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border: 2px dashed black;
+  width: 27px;
+  height: 42px;
+}
+
+div#box1 {
+  width: 15px;
+  height: 15px;
+  position: inherit;
+  top: 0px;
+  border: 6px solid transparent;
+  border-bottom-width: 3px;
+  border-radius: 0;
+}
+
+div#box2 {
+  width: 15px;
+  height: 15px;
+  position: inherit;
+  bottom: 0px;
+  border: 6px solid transparent;
+  border-top-width: 3px;
+  border-radius: 0;
+}
+
+div.seg-horizontal {
+  width: 15px;
+  height: 0px;
+}
+
+div.seg-vertical {
+  width: 0px;
+  height: 15px;
+}
+
+div.seg-box {
+  width: 15px;
+  height: 15px;
+  border: 6px solid transparent;
+}
+
+div.display-left {
+  border-left-color: inherit;
+}
+
+div.display-right {
+  border-right-color: inherit;
+}
+
+div.display-top {
+  border-top-color: inherit;
+}
+
+div.display-bottom {
+  border-bottom-color: inherit;
+}
+
+div.point-bed {
+  position: inherit;
+  border: 0px;
+  margin: 0px;
+  top: 0px;
+  right: 0px;
+  display: inline-block;
+  width: 10px;
+  height: 42px;
+}
+
+div.point1 {
+  position: relative;
+  top: 20px;
+  visibility: hidden;
+}
+
+div.point0 {
+  position: relative;
+  top: 5px;
+  visibility: hidden;
+}
+
+div.point-on {
+  visibility: visible;
+}

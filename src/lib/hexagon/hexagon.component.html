@@ -1,0 +1,13 @@
+<div [style.borderColor]="color" class="box"
+     [ngStyle]="{width: w + 'px', height: h + 'px'}" >
+  <div #s0 [style.top.px]="y0" [style.left.px]="x0"
+       class='vis'[class.vertical0]="(w < h)" [class.horizontal0]="(w > h)"
+       [ngStyle]="{top: (y0)+'px', left: (x0)+'px',
+       width:(sw)+'px',height:(sh)+'px', 'border-width': t+'px'}"
+  ></div>
+  <div [style.top.px]="y1" [style.left.px]="x1"
+       class='vis' [class.vertical1]="(w < h)" [class.horizontal1]="(w > h)"
+       [ngStyle]="{top: (y1)+'px', left: (x1)+'px',
+       width:(sw)+'px',height:(sh)+'px', 'border-width': t+'px'}"
+  ></div>
+</div>

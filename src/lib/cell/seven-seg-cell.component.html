@@ -1,0 +1,26 @@
+<div #bed class="bed">
+  <div class="seg horizontal" id="A" [class.on]="segState['A']">
+    <lib-hexagon [width]="horizontalW" [height]="horizontalH" [color]="color" [spacing]="spacing"></lib-hexagon>
+  </div>
+  <div class="seg vertical" id="B" [class.on]="segState['B']">
+    <lib-hexagon [width]="verticalW" [height]="verticalH" [color]="color" [spacing]="spacing"></lib-hexagon>
+  </div>
+  <div class="seg vertical" id="C" [class.on]="segState['C']">
+    <lib-hexagon [width]="verticalW" [height]="verticalH" [color]="color" [spacing]="spacing"></lib-hexagon>
+  </div>
+  <div class="seg horizontal" id="D" [class.on]="segState['D']">
+    <lib-hexagon [width]="horizontalW" [height]="horizontalH" [color]="color" [spacing]="spacing"></lib-hexagon>
+  </div>
+  <div class="seg vertical" id="E" [class.on]="segState['E']">
+    <lib-hexagon [width]="verticalW" [height]="verticalH" [color]="color" [spacing]="spacing"></lib-hexagon>
+  </div>
+  <div class="seg vertical" id="F" [class.on]="segState['F']">
+    <lib-hexagon [width]="verticalW" [height]="verticalH" [color]="color" [spacing]="spacing"></lib-hexagon>
+  </div>
+  <div class="seg horizontal" id="G" [class.on]="segState['G']">
+    <lib-hexagon [width]="horizontalW" [height]="horizontalH" [color]="color" [spacing]="spacing"></lib-hexagon>
+  </div>
+  <div class="seg dot" id="." [class.on]="segState['.']"></div>
+  <div class="seg colon" id=":" [class.on]="segState[':']"></div>
+  <div class="seg comma" id="," [class.on]="segState[',']"></div>
+</div>

@@ -1,0 +1,37 @@
+
+<div #digitBed>
+ <!-- <div class="seg-horizontal" [class.display-bottom]="segState.A"></div>
+  <div class="seg-vertical" [class.display-right]="segState.F"></div> -->
+  <div [class.display-left]  ="segState.F"
+       [class.display-top]   ="segState.A"
+       [class.display-right] ="segState.B"
+       [class.display-bottom]="segState.G"
+       #box1>
+  </div>
+  <!--
+  <div class="set-vertical" [class.display-left]="segState.B"></div>
+  <div class="seg-vertical" [class.display-right]="segState.E"></div>
+  -->
+  <div [class.display-left]  ="segState.E"
+       [class.display-top]   ="segState.G"
+       [class.display-right] ="segState.C"
+       [class.display-bottom]="segState.D"
+       #box2>
+  </div>
+  <!--
+  <div class="set-vertical" [class.display-top]="segState.C"></div>
+  <div class="seg-horizontal" [class.display-bottom]="segState.D"></div>
+  -->
+
+</div>
+
+<div class="point-bed" [ngStyle]="{'width': sanitizer.bypassSecurityTrustStyle('calc(1.5*'+thickness+')'),
+    'padding':sanitizer.bypassSecurityTrustStyle('calc(0.5*'+thickness+')'),
+  'height': height}">
+  <div class="point0" [class.point-on]="segState[':']"
+       [ngStyle]="{'background-color': color, 'width': thickness,'height': thickness,
+       'top':sanitizer.bypassSecurityTrustStyle('calc(2*'+thickness+')')}"></div>
+  <div class="point1" [class.point-on]="segState['.']"
+       [ngStyle]="{'background-color': color, 'width': thickness,'height': thickness,
+       'top':sanitizer.bypassSecurityTrustStyle('calc(' + height + '-2*'+thickness+')')}"></div>
+</div>

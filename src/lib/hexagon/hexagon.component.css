@@ -1,0 +1,33 @@
+div.vis {
+  border-style: solid;
+  border-color: transparent;
+  position: absolute;
+}
+
+div.vertical0 {
+  left: -50%;
+  border-right-color: inherit;
+}
+div.vertical1 {
+  left: 50%;
+  border-left-color: inherit;
+}
+
+div.horizontal0 {
+  top: -50%;
+  border-bottom-color: inherit;
+}
+
+div.horizontal1 {
+  top: 50%;
+  border-top-color: inherit;
+}
+
+div.box {
+  position: relative;
+  display: inline-block;
+  top: 0px;
+  left: 0px;
+  overflow: unset;
+  vertical-align: top;
+}
