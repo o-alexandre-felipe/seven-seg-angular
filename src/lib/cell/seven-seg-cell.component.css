@@ -1,6 +1,7 @@
 div.bed {
   position: relative;
   display: inline-block;
+  text-align: left; /*<!-- the text align 'right' from parent elements was affecting the behavior --> */
   top: 0px;
   left: 0px;
   width: 30px;

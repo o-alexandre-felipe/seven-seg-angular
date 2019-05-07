@@ -18,7 +18,7 @@ export class SevenSegCellComponent implements OnInit, OnChanges {
   horizontalW: number;
   verticalW: number;
   verticalH: number;
-  segState: {[key: string]:boolean;};
+  segState: { [key: string]: boolean; };
   _digit = '';
   @Input('digit') set digit(digit: string) {
     const s = {};
@@ -99,7 +99,7 @@ export class SevenSegCellComponent implements OnInit, OnChanges {
     ///////////////////////////////////////////////////////////////
     ///  Set size
     ///////////////////////////////////////////////////////////////
-    this.horizontalW = w - 1.5 * t;
+    this.horizontalW = w - 2 * t;
     this.horizontalH = t;
     for (const id of 'ADG') // horizontal elements
     {
@@ -135,7 +135,7 @@ export class SevenSegCellComponent implements OnInit, OnChanges {
     // the segments on the right hand side (1)
     for (const id of 'BC') // vertical elements
     {
-      elements[id].style.left = styleMeasure(w - 2.5 * t);
+      elements[id].style.left = styleMeasure(w - 3 * t);
     }
     for (const id of '.:') {
       elements[id].style.left = styleMeasure(w - 1.5 * t);
@@ -153,9 +153,7 @@ export class SevenSegCellComponent implements OnInit, OnChanges {
     for (const id of 'D.') {
       elements[id].style.top = styleMeasure(h - 2 * t);
     }
-    console.log([this.spacing, this.thickness, this.horizontalH, this.horizontalW, this.verticalW, this.verticalH]);
     elements[','].style.top = styleMeasure(h - t);
-    console.log('style changed');
   }
 
 

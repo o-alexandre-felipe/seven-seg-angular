@@ -19,7 +19,7 @@ export class SevenSegComponent implements OnInit {
   @Input('char-width') width = 18;
   @Input('char-height') height = 42;
   @Input('color') color = 'black';
-  @Input('spacing') spacing = 0.5;
+  @Input('spacing') spacing = 1;
   get digitState(): string[] {
     const m = this.value.match(/(&[^;]*;?|.)([.,:;]?)/g);
     const result = [];

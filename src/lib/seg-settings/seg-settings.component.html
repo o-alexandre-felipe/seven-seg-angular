@@ -1,0 +1,55 @@
+<table>
+  <tr>
+    <td>Sample sharacters</td>
+    <td>
+      <input type="text" [(ngModel)]="chars" />
+    </td>
+  </tr>
+  <tr>
+    <td>Color</td>
+    <td>
+      <input type="text" [(ngModel)]="color" />
+    </td>
+  </tr>
+  <tr>
+    <td>Length</td>
+    <td>
+      <input type="number"  min="0" max="1000" [(ngModel)]="count" />
+    </td>
+  </tr>
+  <tr>
+    <td>Thickness</td>
+    <td>
+      <input type="number" min="0" max="1000" [(ngModel)]="thickness" />
+    </td>
+  </tr>
+  <tr>
+    <td>Spacing</td>
+    <td>
+      <input type="number" min="0" max="1000" [(ngModel)]="spacing" />
+    </td>
+  </tr>
+  <tr>
+    <td>Width</td>
+    <td>
+      <input type="number" min="0" max="1000" [(ngModel)]="width" />
+    </td>
+  </tr>
+  <tr>
+    <td>Height</td>
+    <td>
+      <input type="number" min="0" max="1000" [(ngModel)]="height" />
+    </td>
+  </tr>
+</table>
+
+<div > {{count}} chars from {{chars}}, displayed in color {{color}}</div>
+<div class="display">
+    <lib-seven-seg [thickness]="thickness" [spacing]="spacing" [char-height]="height" [char-width]="width" [chars]="chars" [count]="count" [color]="color"></lib-seven-seg>
+</div>
+<!--
+<div *ngFor="let p of [{'w':20,'h':50},{'w':4,'h':39},{'w':90,'h':13}]">
+  <lib-hexagon [width]="p.w" [height]="p.h" color="orange"></lib-hexagon>
+  width: {{p.w}}, height: {{p.h}};
+</div>
+-->

@@ -1,0 +1,13 @@
+div.display {
+  background-color: transparent;
+  border: 2px black;
+  display: block;
+}
+
+input[type=number] {
+  text-align: right;
+}
+
+table {
+  background-color: #ddffbb;
+}
