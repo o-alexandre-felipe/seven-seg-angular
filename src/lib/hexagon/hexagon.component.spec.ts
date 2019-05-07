@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { HexagonComponent } from './hexagon.component';
+import {HexagonComponent} from './hexagon.component';
 
 describe('HexagonComponent', () => {
   let component: HexagonComponent;
@@ -8,9 +8,9 @@ describe('HexagonComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HexagonComponent ]
+      declarations: [HexagonComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

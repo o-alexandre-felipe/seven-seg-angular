@@ -6,22 +6,38 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./hexagon.component.css']
 })
 export class HexagonComponent implements OnInit {
-  @Input('spacing') s = 0;
   @Input('color') color = 'black';
+
+  @Input('spacing') set spacing(value: number) {
+    this.s = value;
+    this.fit();
+  }
+
+  get spacing(): number {
+    return this.s;
+  }
+
   @Input('width') set width(value: number) {
     this.w = value;
     this.fit();
   }
-  get width(): number { return this.w; }
+
+  get width(): number {
+    return this.w;
+  }
 
   @Input('height') set height(value: number) {
     this.h = value;
     this.fit();
   }
-  get height(): number { return this.h; }
+
+  get height(): number {
+    return this.h;
+  }
 
   h: number;
   w: number;
+  s: number;
   t: number;
   sw: number;
   sh: number;
@@ -31,9 +47,9 @@ export class HexagonComponent implements OnInit {
   y1: number;
 
   fit(): void {
-    const w = this.w;
-    const h = this.h;
-    const s = this.s;
+    const w = this.width;
+    const h = this.height;
+    const s = this.spacing * Math.sqrt(2);
     let sw: number;
     let sh: number;
     let x0: number;
@@ -41,8 +57,7 @@ export class HexagonComponent implements OnInit {
     let x1: number;
     let y1: number;
     let t: number;
-    if ( w < h)  // vertical
-    {
+    if (w < h) { // vertical
       t = w / 2;
       x0 = -t;
       x1 = t;
@@ -66,9 +81,11 @@ export class HexagonComponent implements OnInit {
     this.y1 = y1;
     this.sw = sw;
     this.sh = sh;
-    // console.log({w: w,h: h,t: t,x0: x0,y0: y0,x1: x1,y1: y1});
+    console.log({w: w, h: h, t: t, s: s});
   }
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
     this.fit();
